@@ -1,0 +1,103 @@
+.Container {
+  display: flex;
+}
+
+.wine-info {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../images/wine-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #000;
+  font-size: 12px;
+  width: 100%;
+  min-height: 480px;
+  text-align: center;
+}
+
+.wine-info-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arapey', serif;
+  font-size: 46px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-top: 20px;
+  text-shadow: 2px 2px 6px #000;
+  text-align: center;
+}
+
+.wine-info-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arapey', serif;
+  font-size: 30px;
+  margin-top: 45px;
+  text-align: center;
+}
+
+.wine-info-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arapey', serif;
+  font-size: 30px;
+  margin-top: 33px;
+  text-align: center;
+}
+
+.getstarted {
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arapey', serif;
+  font-size: 36px;
+  margin-top: 33px;
+  text-align: center;
+  width: 210px;
+  height: 60px;
+}
+
+@media all and (max-width: 800px) {
+  .Container {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .wine-info-title {
+    font-size: 26px;
+  }
+
+  .wine-info-text {
+    font-size: 26px;
+  }
+
+  .getstarted {
+    width: 180px;
+    height: 60px;
+  }  
+}  
+
+@media all and (max-width: 600px) {
+  .Container {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .wine-info-title {
+    font-size: 22px;
+  }
+
+  .wine-info-text {
+    font-size: 22px;
+  }
+
+  .getstarted {
+    width: 150px;
+    height: 53px;
+    font-size: 28px;
+  }  
+}  

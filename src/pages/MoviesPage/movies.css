@@ -1,0 +1,20 @@
+.container {
+  border: 3px solid #393D3F;
+  height: 50vh;
+  width: 80%;
+  margin: 0 auto; 
+}
+
+.item {
+  background-color: #393D3F;
+  border: 3px solid #62929E;
+  color: #E6E6E8;
+  font-size: 40px;
+  margin: 5px;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+}
