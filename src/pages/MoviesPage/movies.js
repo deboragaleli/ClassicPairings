@@ -52,9 +52,11 @@ class Movies extends Component {
 
     return (
       <div className="Movies">
-        <Nav />
+        <Nav>
+          <h1 className="page-title">Movies</h1>
+        </Nav>
 
-        <div className="Container">
+        <div className="container main-content">
           <div className="box2">
           {!movies.length &&
             <Loader />

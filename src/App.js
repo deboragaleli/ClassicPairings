@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import Routes from './routes';
 //import {ApolloProvider,} from 'react-apollo';
-import './App.css';
+import './App.scss';
 
 
 

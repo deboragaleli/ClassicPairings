@@ -59,8 +59,11 @@ class Recipes extends Component {
     
     return (
       <div className="">
-        <Nav />
-        <div className="Container">
+        <Nav>
+          <h1 className="page-title">Recipes</h1>
+        </Nav>
+        
+        <div className="container main-content">
           <div className="box2">
             <div className="wine-cards">
               <RecipeCards recipes={recipes} />

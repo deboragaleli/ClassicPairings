@@ -61,6 +61,62 @@
   height: 60px;
 }
 
+.slider {
+  margin-bottom: 50px;
+}
+
+.featured-wines {
+  margin-top: 50px;
+
+  .wine-item {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    .wine-image {
+      display: flex;
+      width: 100%;
+      max-width: 260px;
+      height: 330px;
+      background: #F2F2F2;
+      border: 1px solid #DBDBDB;
+  
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      font-family: 'Arapey', Georgia;
+      font-size: 24px;
+      color: #222;
+      margin: 0;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    h6  {
+      font-family: 'Arapey', Georgia;
+      font-size: 16px;
+      color: #9D9D9D;
+      margin: 0;
+    }
+  }
+
+  
+}
+
+@media all and (max-width: 1000px) {
+  .container.main-content {
+    .slider {
+      margin-top: 80px;
+    }
+  }
+}
+
+
 @media all and (max-width: 800px) {
   .Container {
     flex-direction: column;

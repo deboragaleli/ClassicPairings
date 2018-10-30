@@ -22,13 +22,6 @@
   list-style: none;
 }
 
-.wine-list .list .category-name {
-  font-size: 13px;
-  padding-left: 0px;
-  margin-bottom: 6px;
-  color: #333;
-}
-
 .wine-list h3 {
   margin: 0;
   text-align: left;
@@ -58,7 +51,7 @@
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
-  padding-left: 30px;
+  padding: 0 !important;
 }
 
 .wine-banner {
@@ -135,16 +128,70 @@
   width: 100%;
 }
 
-.filter-search li {
-  text-transform: capitalize;
-}
+.filter-search { 
+  display: flex;
+  justify-content: center;
 
-.filter-search li input[type="checkbox"] {
-  margin-right: 5px;
-}
+  .wine-list {
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
 
-.filter-search .form-group {
-  margin-bottom: 0;
+  h3 {
+    font-size: 24px;
+    font-family: 'Arapey', serif;
+    font-weight: normal;
+    text-transform: capitalize;
+    text-align: center;
+    color: #222;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 90%;
+    background: #F5F5F5;
+    border-radius: 3px;
+    padding: 15px !important;
+    margin-top: 20px;
+
+    li {
+      text-transform: capitalize;
+      text-align: center;
+      width: 20%;
+
+      &.active {
+        border-bottom: 2px solid #222;
+      }
+
+      &.category-name {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding-left: 0px;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      label {
+        cursor: pointer;
+      }
+
+      input[type="checkbox"] {
+        position: absolute;
+        margin-right: 5px;
+        opacity: 0;
+      }
+  
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
 }
 
 

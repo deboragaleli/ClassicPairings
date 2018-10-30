@@ -1,0 +1,130 @@
+body {
+  padding-bottom: 30px;
+}
+
+h2 {
+  &.featured-title {
+    position: relative;
+    display: inline-block;
+    font-family: 'Arapey', Georgia;
+    color: #222222;
+    font-size: 30px;
+    background-image: url('./images/wine-icon@2x.png');
+    background-size: 31px 37px;
+    background-repeat: no-repeat;
+    padding: 2px 0;
+    padding-left: 55px;
+
+    &:after {
+      position: absolute;
+      content: ' ';
+      top: 50%;
+      right: -190px;
+      width: 159px;
+      height: 3px;
+      background-image: url('./images/title-lines@2x.png');
+    }
+  }
+}
+
+.header-title {
+  h1 {
+    &.page-title {
+      padding-top: 20px;
+      font-size: 55px;
+    }
+  }
+}
+
+.container {
+  &.main-content {
+    margin-top: -170px;
+  }
+}
+
+.static-modal .modal {
+  background:rgba(0,0,0,.7);
+  height: 100%;
+
+  backdrop-filter: blur(5px);
+
+  input {
+    border-radius: 0;
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-header {
+  background: #963B4A;
+  border-radius: 0;
+  color: #FFF;
+  font-family: 'Arapey', Georgia;
+
+  h4 {
+    font-size: 25px;
+  }
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+
+  button {
+    margin: 0 10px;
+    border-radius: 0;
+
+    padding: 10px 25px;
+
+    &.btn-secondary {
+      background: #963B4A;
+      padding: 6px 25px;
+
+      &:hover, &:active {
+        color: #FFF;
+        background: #963B4A - 20 !important;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .header-title {
+    h1 {
+      &.page-title {
+        margin-top: -20px !important;
+        padding-top: 0px;
+        font-size: 55px;
+      }
+    }
+  }
+
+  .container {
+    &.main-content {
+      margin-top: -50px;
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
+  h2 {
+    &.featured-title {  
+      &:after {
+        background-image: none;
+      }
+    }
+  }
+}
+
+/* Style for authentication */
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/Lato-Regular.ttf") format("ttf")
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}

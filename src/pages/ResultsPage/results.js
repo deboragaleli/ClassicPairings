@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './results.css';
+import './results.scss';
 import Nav from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import Loader from '../../components/Loader';
 import ResultsCards from '../../components/ResultsCards/resultscards';
+
+import navBg from '../../images/results-banner.jpg';
 
 const apiKey = 'a7065834b36529e3cf15043f9180d627';
 const apiKeyMovie = 'bb8fc13dd42a95bd2852111e40ea8f23';
@@ -60,24 +62,26 @@ class Results extends Component {
     
     return (
       <div className="Results">
-        <Nav />
+        <Nav bg={navBg}>
+          <h1 className="page-title">Your Perfect Match...</h1>
+        </Nav>
         
-          <div className="storage">
+        <div className="container main-content">
+
               <div className="capsule">
-                <div className="hero-banner"></div> 
                   {(!recipe || !movie) &&
                     <Loader />
                   }
 
                   {(recipe && movie && wine) && 
                     <div className="results-cards">
-                      <h1>Your perfect match...</h1>
-
                       <div className="cards-container">
                         <ResultsCards
                           title={wine.name}
                           subtitle={`<strong>Vintage:</strong> ${wine.vintage}`}
                           image={wine.image || 'http://ei.isnooth.com/multimedia/7/2/8/image_610047_square.png'} description={`<strong>Region:</strong> ${this.getRegion(wine.region)}`}
+                          region={wine.region}
+                          vintage={wine.vintage}
                         />
                         
                         <ResultsCards
@@ -95,7 +99,8 @@ class Results extends Component {
                     </div>
                   }  
                 </div> 
-          </div>
+
+        </div>
 
         <Footer />  
       </div>

@@ -6,10 +6,10 @@
   bottom: 0;
   position: fixed;
   width: 100%;
-  padding-top: 0px;
+  padding: 5px;
   z-index: 1;
 }
 
-/* .Site-content {
-  flex: 1;
-} */
+.footer p {
+  margin: 0;
+}

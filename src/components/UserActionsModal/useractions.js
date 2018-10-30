@@ -20,17 +20,6 @@ class GetStarted extends Component {
     };
   }
 
-  componentDidMount(){
-    this.handleAuthentication(this.props);
-  }
-
-  handleAuthentication = () => {
-    if (/access_token|id_token|error/.test(window.location.hash)) {
-      auth.handleAuthentication();
-      window.location.reload();
-    }
-  }
-
   // Handles the user's information and out inside the state
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -94,8 +83,11 @@ class GetStarted extends Component {
                 <label>Password {typeModal === 'sign-up' && <span>(Must have at least 8 characters)</span>}</label>
                 <input ref="user_password" type="password" className="form-control" placeholder="Password" />
               </div>
-              <button type="submit" className="btn btn-default">Submit</button>
-              <Button className="close-button" onClick={() => this.props.toggleModal()}>Close</Button>
+
+              <div className="modal-buttons">
+                <button type="submit" className="btn btn-secondary">Submit</button>
+                <Button className="close-button" onClick={() => this.props.toggleModal()}>Close</Button>
+              </div>
             </form>
 
           </Modal.Body>
